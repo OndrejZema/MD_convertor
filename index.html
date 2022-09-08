@@ -1,0 +1,40 @@
+<h1>Konvertor Markdown na HTML</h1>
+<hr />
+<p>Tento program slouží pro konverzi z textového formátu <strong>markdown</strong> do formátu <strong>html</strong>.</p>
+<p>Buhužel knihovna markdown pro python nepodporuje implicitně rozšířenou syntax tohoto formátu.</p>
+<p>Položky jako:</p>
+<ul>
+<li>Zvýraznění pozadí textu</li>
+<li>Tabulky</li>
+<li>Smajlíky</li>
+</ul>
+<h2>Požadavky na spuštění</h2>
+<ul>
+<li>python verze 3.10</li>
+<li>pip</li>
+<li>knihovna markdown</li>
+<li>venv modul pro python (optimální)</li>
+</ul>
+<h3>Příprava virtuálního prostředí</h3>
+<pre><code>py -m venv .venv/md_app
+cd .venv
+cd md_app
+cd Scripts
+activate.bat
+</code></pre>
+<h3>Instalace markdown</h3>
+<pre><code>(md_app)&gt; pip install markdown
+</code></pre>
+<hr />
+<h2>Spuštění aplikace</h2>
+<pre><code>(md_app)&gt; py app.py
+</code></pre>
+<h2>Interakce s aplikací</h2>
+<p>Výsledný soubor se uloží pod stejným názvem s koncovkou html</p>
+<h3>Soubor s výchozím názvem</h3>
+<pre><code>Default path .md file (index.md) Y/N: Y
+</code></pre>
+<h3>Soubor s odlišným názvem</h3>
+<pre><code>Default path .md file (index.md) Y/N: N
+Path to .md file: note.md
+</code></pre>
