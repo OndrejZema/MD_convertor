@@ -1,15 +1,17 @@
 import markdown
 import os
-
-def main():
+import sys
+def main(args):
     path = "index.md"
-    is_default_path: str = input("Default path .md file ("+path+") Y/N: ")
-    if is_default_path.upper() == "N":
-        while True:
-            path = input("Path to .md file: ")
-            if os.path.exists(path): break
-            else: print("Uncorrect path")
-    
+    if len(args) != 2:    
+        is_default_path: str = input("Default path .md file ("+path+") Y/N: ")
+        if is_default_path.upper() == "N":
+            while True:
+                path = input("Path to .md file: ")
+                if os.path.exists(path): break
+                else: print("Uncorrect path")
+    else:
+        path = args[1]
     with open(path, "r") as file:
         lines = file.readlines()
         md = ''.join(lines)
@@ -19,4 +21,4 @@ def main():
         html_file.write(html)
 
 if __name__  == "__main__":
-    main()
+    main(sys.argv)
